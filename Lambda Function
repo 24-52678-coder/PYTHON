@@ -1,0 +1,10 @@
+add = lambda a, b: a + b
+
+multiply = lambda x, y: x * y
+
+is_even = lambda n: n % 2 == 0
+
+print("Addition (10 + 5):", add(10, 5))
+print("Multiplication (4 * 6):", multiply(4, 6))
+print("Is 8 even?:", is_even(8))
+print("Is 7 even?:", is_even(7))
