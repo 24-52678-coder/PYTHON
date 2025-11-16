@@ -1,0 +1,14 @@
+import math
+
+name = "Rennalyn"
+print("Original String:", name)
+print("Uppercase:", name.upper())
+print("Lowercase:", name.lower())
+print("Length of string:", len(name))
+
+number = -25
+print("\nOriginal Number:", number)
+print("Absolute value:", abs(number))
+print("Square root of 25:", math.sqrt(25))
+print("2 raised to the power of 5:", math.pow(2, 5))
+print("Rounded value of 3.14159:", round(3.14159, 2))
