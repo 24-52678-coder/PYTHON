@@ -1,0 +1,20 @@
+car = {
+    "brand": "Toyota",
+    "model": "Fortuner",
+    "year": 2025,
+    "color": "White Pearl",
+    "price": 2100000
+}
+
+print("--- Car Information ---")
+print("Brand:", car["brand"])
+print("Model:", car["model"])
+print("Year:", car["year"])
+print("Color:", car["color"])
+print("Price: ₱", car["price"])
+
+car["color"] = "Black Metallic"
+print("\nUpdated Color:", car["color"])
+
+car["owner"] = "Rennalyn Espino"
+print("Owner:", car["owner"])
