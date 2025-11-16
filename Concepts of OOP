@@ -1,0 +1,70 @@
+from abc import ABC, abstractmethod
+
+class Vehicle(ABC):
+    def __init__(self, brand, model, year):
+        self._brand = brand   
+        self._model = model      
+        self._year = year        
+
+    def get_brand(self):
+        return self._brand
+
+    def set_brand(self, brand):
+        self._brand = brand
+
+    @abstractmethod
+    def start_engine(self): 
+        pass
+
+    @abstractmethod
+    def stop_engine(self): 
+        pass
+
+
+class Car(Vehicle):
+    def __init__(self, brand, model, year, transmission):
+        super().__init__(brand, model, year)
+        self._transmission = transmission
+
+    def start_engine(self):
+        print(f"{self._brand} {self._model} ({self._year}) engine started with push button.")
+
+    def stop_engine(self):
+        print(f"{self._brand} {self._model} engine stopped.")
+
+    def display_info(self):
+        print(f"Brand: {self._brand}, Model: {self._model}, Year: {self._year}, Transmission: {self._transmission}")
+
+
+class Motorcycle(Vehicle):
+    def __init__(self, brand, model, year, type_motor):
+        super().__init__(brand, model, year)
+        self._type_motor = type_motor
+
+    def start_engine(self):
+        print(f"{self._brand} {self._model} ({self._year}) engine started with kick start.")
+
+    def stop_engine(self):
+        print(f"{self._brand} {self._model} engine stopped.")
+
+    def display_info(self):
+        print(f"Brand: {self._brand}, Model: {self._model}, Year: {self._year}, Type: {self._type_motor}")
+
+
+def main():
+    my_car = Car("Toyota", "Fortuner", 2025, "Automatic")
+    my_motor = Motorcycle("Honda", "CB150R", 2023, "Sport")
+
+    my_car.start_engine()
+    my_car.display_info()
+    my_car.stop_engine()
+
+    print()
+
+    my_motor.start_engine()
+    my_motor.display_info()
+    my_motor.stop_engine()
+
+
+if __name__ == "__main__":
+    main()
